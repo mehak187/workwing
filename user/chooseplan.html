@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/main1.css">
+  <link rel="stylesheet" href="../css/main2.css">
+  <title>Edit Profile</title>
+</head>
+
+<body>
+  <section>
+    <div class="main">
+      <div class="left ">
+        <div class="left-top">
+          <div class="d-flex align-items-center justify-content-end">
+            <i class="fa-solid fa-circle-xmark d-md-none hidesidebar text-white"></i>
+          </div>
+          <a href="dashboard.html" class="logodiv">
+            <img src="../img/dashboard-logo.png" alt="">
+          </a>
+        </div>
+        <div class="left-mid">
+          <div class="list">
+            <ul>
+              <li>
+                <a href="dashboard.html" class="sidelink">
+                  <div class="d-flex">
+                    <img src="../img/grid.svg" class="sideicon" alt="icon">
+                    <p class="mb-0">Dashboard</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="ticket.html" class="sidelink">
+                  <div class="d-flex">
+                    <img src="../img/ticket.svg" class="sideicon" alt="icon">
+                    <p class="mb-0">Ticket Management</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="uploadticket.html" class="sidelink">
+                  <div class="d-flex">
+                    <img src="../img/addticket.svg" class="sideicon" alt="icon">
+                    <p class="mb-0">Upload Ticket</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="vehical.html" class="sidelink">
+                  <div class="d-flex">
+                    <img src="../img/car.svg" class="sideicon" alt="icon">
+                    <p class="mb-0">Vehicle Information</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="drivers.html" class="sidelink">
+                  <div class="d-flex">
+                    <img src="../img/adduser.svg" class="sideicon" alt="icon">
+                    <p class="mb-0">Drivers</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="support.html" class="sidelink">
+                  <div class="d-flex">
+                    <img src="../img/support.svg" class="sideicon" alt="icon">
+                    <p class="mb-0">Support</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="faq.html" class="sidelink">
+                  <div class="d-flex">
+                    <img src="../img/faq.svg" class="sideicon" alt="icon">
+                    <p class="mb-0">FAQ</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="left-bottom">
+          <a href="signin.html" class="logouts">
+            <div class="d-flex align-items-center justify-content-center">
+              <i class="fa-solid fa-right-from-bracket me-2"></i>
+              <p class="mb-0">Logout</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="right">
+        <div class="right-top input-shadow">
+          <div class="d-flex align-items-center justify-content-between w-100">
+            <div class="d-flex align-items-center">
+              <i class="fa-solid fa-bars d-md-none pointer me-2 tog"></i>
+              <h2 class="mb-0 font-main fw-medium me-2">Edit Profile</h2>
+            </div>
+            <div class=" d-flex align-items-center justify-content-between">
+              <div class="d-none d-lg-flex align-items-center px-3 py-2 bg-gray rounded-3 me-3">
+                <label for="search"><i class="fa-solid fs-6 me-2 fa-magnifying-glass"></i></label>
+                <input type="text" id="search" class="focus-none bg-transparent border-0 w-100" placeholder="Search">
+              </div>
+              <div class="d-flex align-items-center">
+                <a href="notification.html">
+                  <img src="../img/bell.svg" alt="user" class="bellimg me-2">
+                </a>
+                <div>
+                  <div class="dropdown d-flex justify-content-between w-100 align-items-center">
+                    <a href="#" class="mb-0 text-decoration-none d-flex align-items-end">
+                      <div class="me-2 me-sm-0">
+                        <img src="../img/profile.png" alt="" class="img-wade">
+                      </div>
+                      <div class="ms-2 d-none d-sm-block">
+                        <h6 class="mb-0 l-h fw-medium text-dark">Wade Warren</h6>
+                        <span class="font-12 mb-0 text-secondary">wade.warren@mail.com</span>
+                      </div>
+                    </a>
+                    <button id="dropdownIcon" class="border-0 bg-transparent" type="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="fa-solid fa-caret-down fs-5"></i>
+                    </button>
+                    <ul class="dropdown-menu w-100">
+                      <li><a class="dropdown-item " href="profile.html"><img src="../img/view-eye.png" alt=""
+                            class="me-2">View Profile</a>
+                      </li>
+                      <li><a class="dropdown-item" href="login.html"><i
+                            class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="right-bottom">
+          <div class="bottom-main">
+            <div class="content ">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12 min-100 d-flex align-items-center  mx-auto">
+                    <div class="bg-white px-xl-4 rounded-5 shadow-log py-4 py-sm-3 w-100">
+                      <h2 class="text-center mb-0">Choose Your Plan</h2>
+                      <p class="text-center mb-lg-5">Select a plan tailored to your needs</p>
+                      <div class="row ">
+                        <div class="col-lg-6 col-xl-4 mt-xl-5 mb-4 mb-lg-0">
+                          <div class="premium-plan mx-2 pb-4">
+                            <div class="">
+                              <h5 class="text-center pt-4">Premium Price</h5>
+                              <h4 class="text-center">$ 74.99</h4>
+                              <p class="text-center">Monthly</p>
+                              <p class="text-center font-12 text-secondary">The Premium Plan offers unlimited ticket
+                                handling annually,
+                                making it perfect for those who receive multiple tickets
+                                throughout the year. This plan ensures that no matter
+                                how many tickets you get, we've got you covered
+                                with top-notch service and support.</p>
+                              <h5>Features</h5>
+                              <ul class="main-ul">
+                                <li class="">Unlimited traffic ticket handling per year</li>
+                                <li class="">Priority processing for faster resolution</li>
+                                <li class="">Dedicated customer support with extended hours</li>
+                                <li class="">Comprehensive management tools and notifications</li>
+                              </ul>
+                            </div>
+                            <div class="position-btn">
+                              <a href="addpayment.html"
+                                class="btn-style w-auto px-5 py-2 text-nowrap text-decoration-none d-block">Buy Now</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-4 mt-5 mt-md-0">
+                          <div class="mx-2 pb-4 shadow-lg premium-plan2">
+                            <div class="position-pop">
+                              <button
+                                class="btn-style bg-white border border-white shadow text-primary w-auto px-5 py-2 text-nowrap">Popular</button>
+                            </div>
+                            <div class="">
+                              <h5 class="text-center text-white pt-4">Standard Price</h5>
+                              <h4 class="text-center text-white">$ 49.99</h4>
+                              <p class="text-center text-white">Monthly</p>
+                              <p class="text-center font-12 text-white">Our Standard Plan is designed to cover a
+                                specific number of
+                                tickets per year, providing you with reliable and efficient
+                                handling for your traffic tickets. Ideal for individuals
+                                who receive occasional tickets and want peace of
+                                mind knowing they have professional assistance
+                                when needed.</p>
+                              <h5 class="text-white">Features</h5>
+                              <ul class="main-ul">
+                                <li class="text-white">Covers a set number of traffic tickets annually</li>
+                                <li class="text-white">Professional handling and resolution of tickets</li>
+                                <li class="text-white">Access to customer support for any inquiries</li>
+                                <li class="text-white">Easy tracking and management of your tickets through our
+                                  online portal</li>
+                              </ul>
+                            </div>
+                            <div class="position-btn">
+                              <a href="addpayment.html"
+                                class="btn-style w-auto px-5 py-2 text-nowrap text-decoration-none d-block">Buy Now</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-4 mt-5 mb-lg-0">
+                          <div class="premium-plan mx-2 pb-4">
+                            <div class="">
+                              <h5 class="text-center pt-lg-4">Family Price</h5>
+                              <h4 class="text-center">$ 179.99</h4>
+                              <p class="text-center">Monthly</p>
+                              <p class="text-center font-12 text-secondary">We understand that your needs may change
+                                over time, so
+                                we offer easy upgrade and downgrade options for our
+                                subscription plans. Whether you need to handle more
+                                tickets or want to scale down, our flexible subscription
+                                options allow you to adjust your plan effortlessly.</p>
+                              <h5 class="">Features</h5>
+                              <ul class="main-ul">
+                                <li class="">Upgrade: Switch from the Standard Plan to the Premium Plan at
+                                  any time for enhanced coverage and additional benefits.</li>
+                                <li class="">Downgrade: If your ticket handling needs decrease, you can easily
+                                  switch from the Premium Plan to the Standard Plan.</li>
+                              </ul>
+                            </div>
+                            <div class="position-btn">
+                              <a href="addpayment.html"
+                                class="btn-style w-auto px-5 py-2 text-nowrap text-decoration-none d-block">Buy Now</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>

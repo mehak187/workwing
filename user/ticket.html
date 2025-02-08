@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main1.css">
+    <link rel="stylesheet" href="../css/main2.css">
+    <title>Ticket Management</title>
+</head>
+
+<body>
+    <section>
+        <div class="main">
+            <div class="left ">
+                <div class="left-top">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <i class="fa-solid fa-circle-xmark d-md-none hidesidebar text-white"></i>
+                    </div>
+                    <a href="dashboard.html" class="logodiv">
+                        <img src="../img/dashboard-logo.png" alt="">
+                    </a>
+                </div>
+                <div class="left-mid">
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="dashboard.html" class="sidelink ">
+                                    <div class="d-flex">
+                                        <img src="../img/grid.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Dashboard</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ticket.html" class="sidelink active">
+                                    <div class="d-flex">
+                                        <img src="../img/ticket.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Ticket Management</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="uploadticket.html" class="sidelink">
+                                    <div class="d-flex">
+                                        <img src="../img/addticket.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Tickets</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="vehical.html" class="sidelink">
+                                    <div class="d-flex">
+                                        <img src="../img/car.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Vehicle Information</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="drivers.html" class="sidelink">
+                                    <div class="d-flex">
+                                        <img src="../img/adduser.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Drivers</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="support.html" class="sidelink">
+                                    <div class="d-flex">
+                                        <img src="../img/support.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Support</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="faq.html" class="sidelink">
+                                    <div class="d-flex">
+                                        <img src="../img/faq.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">FAQ</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="left-bottom">
+                    <a href="signin.html" class="logouts">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-right-from-bracket me-2"></i>
+                            <p class="mb-0">Logout</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-top input-shadow">
+                    <div class="d-flex align-items-center justify-content-between w-100">
+                        <div class="d-flex align-items-center">
+                            <i class="fa-solid fa-bars d-md-none pointer me-2 tog"></i>
+                            <h2 class="mb-0 font-main fw-medium me-2">Ticket Management</h2>
+                        </div>
+                        <div class=" d-flex align-items-center justify-content-between">
+                            <div class="d-none d-lg-flex align-items-center px-3 py-2 bg-gray rounded-3 me-3">
+                                <label for="search"><i class="fa-solid fs-6 me-2 fa-magnifying-glass"></i></label>
+                                <input type="text" id="search" class="focus-none bg-transparent border-0 w-100"
+                                    placeholder="Search">
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <a href="notification.html">
+                                    <img src="../img/bell.svg" alt="user" class="bellimg me-2">
+                                </a>
+                                <div>
+                                    <div class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                        <a href="#" class="mb-0 text-decoration-none d-flex align-items-end">
+                                            <div class="me-2 me-sm-0">
+                                                <img src="../img/profile.png" alt="" class="img-wade">
+                                            </div>
+                                            <div class="ms-2 d-none d-sm-block">
+                                                <h6 class="mb-0 l-h fw-medium text-dark">Wade Warren</h6>
+                                                <span class="font-12 mb-0 text-secondary">wade.warren@mail.com</span>
+                                            </div>
+                                        </a>
+                                        <button id="dropdownIcon" class="border-0 bg-transparent" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa-solid fa-caret-down fs-5"></i>
+                                        </button>
+                                        <ul class="dropdown-menu w-100">
+                                            <li><a class="dropdown-item " href="profile.html"><img
+                                                        src="../img/view-eye.png" alt="" class="me-2">View Profile</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="login.html"><i
+                                                        class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="right-bottom">
+                    <div class="bottom-main">
+                        <div class="content ">
+                            <div class="container-fluid">
+                                <div class="row align-items-center justify-content-between border-ott">
+                                    <div class="col-12">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <h4 class="mb-0">Tickets Management</h4>
+                                            </div>
+                                            <div class="text-end">
+                                                <a href="uploadticket.html" class="blue-btn">
+                                                    Upload Ticket</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main-tabs mt-4">
+                                    <div class="min-row">
+                                        <div class="min-r">
+                                            <ul class="nav nav-pills flex-nowrap gap-2 mb-md-3" id="pills-tab"
+                                                role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="pills-home-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
+                                                        role="tab" aria-controls="pills-home"
+                                                        aria-selected="true">Open</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-profile-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-profile"
+                                                        type="button" role="tab" aria-controls="pills-profile"
+                                                        aria-selected="false">Pending</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-contact-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-contact"
+                                                        type="button" role="tab" aria-controls="pills-contact"
+                                                        aria-selected="false">Paid</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-disabled-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-disabled"
+                                                        type="button" role="tab" aria-controls="pills-disabled"
+                                                        aria-selected="false">Close</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="tab-content cont mt-3" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                            aria-labelledby="pills-home-tab" tabindex="0">
+                                            <div class="row mt-4">
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(open)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle bg-white px-1"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(open)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle bg-white px-1"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(open)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle bg-white px-1"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(open)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle bg-white px-1"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                            aria-labelledby="pills-profile-tab" tabindex="0">
+                                            <div class="row mt-4">
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black2 d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(pending)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle px-1 bg-white"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black2 d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(pending)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle px-1 bg-white"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black2 d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(pending)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle px-1 bg-white"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black2 d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(pending)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle px-1 bg-white"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                            aria-labelledby="pills-contact-tab" tabindex="0">
+                                            <div class="row mt-4">
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black3 d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(paid)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle px-1 bg-white"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black3 d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(paid)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle px-1 bg-white"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black3 d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(paid)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle px-1 bg-white"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black3 d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(paid)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle px-1 bg-white"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-disabled" role="tabpanel"
+                                            aria-labelledby="pills-disabled-tab" tabindex="0">
+                                            <div class="row mt-4">
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black4 d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(closed)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle px-1 bg-white"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black4 d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(closed)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle px-1 bg-white"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black4 d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(closed)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle px-1 bg-white"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
+                                                    <div class="ticket-head">
+                                                        <div
+                                                            class="ticket-black4 d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <h6 class="text-dark mb-0">Ticket No: 1<small
+                                                                        class="text-dark font-12">(closed)</small></h6>
+                                                            </div>
+                                                            <div class="drop-d">
+                                                                <div
+                                                                    class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                                                    <button id="dropdownIcon"
+                                                                        class="rounded-circle px-1 bg-white"
+                                                                        type="button" data-bs-toggle="dropdown"
+                                                                        aria-expanded="false">
+                                                                        <i class="bi bi-three-dots text-black"></i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu w-100">
+                                                                        <li><a class="dropdown-item "
+                                                                                href="ticketdetail.html"><img
+                                                                                    src="../img/view-eye.png" alt=""
+                                                                                    class="me-2">View Details</a></li>
+                                                                        <li><a class="dropdown-item " href=""><img
+                                                                                    src="../img/edit.png" alt=""
+                                                                                    class="me-2">Edit</a></li>
+                                                                        <li><a class="dropdown-item " href="#"><img
+                                                                                    src="../img/del.png" alt=""
+                                                                                    class="me-2">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Name</h6>
+                                                                    <p class="font-12 text-secondary">Ticket Name</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">ID</h6>
+                                                                    <p class="font-12 text-secondary">QZK-526-KLNG</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Date</h6>
+                                                                    <p class="font-12 text-secondary">24 May 2024</p>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <h6 class="text-dark">Fine</h6>
+                                                                    <p class="font-12 text-secondary">1$</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="re">
+                                                                <div class="row mt-2">
+                                                                    <div class="col-6">
+                                                                        <button class="btn-info1 btn">Edit</button>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <button class="btn-del btn">Delete</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

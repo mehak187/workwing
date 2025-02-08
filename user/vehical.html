@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main1.css">
+    <link rel="stylesheet" href="../css/main2.css">
+    <title>Vehicle Information</title>
+</head>
+
+<body>
+    <section>
+        <div class="main">
+            <div class="left ">
+                <div class="left-top">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <i class="fa-solid fa-circle-xmark d-md-none hidesidebar text-white"></i>
+                    </div>
+                    <a href="dashboard.html" class="logodiv">
+                        <img src="../img/dashboard-logo.png" alt="">
+                    </a>
+                </div>
+                <div class="left-mid">
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="dashboard.html" class="sidelink ">
+                                    <div class="d-flex">
+                                        <img src="../img/grid.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Dashboard</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ticket.html" class="sidelink ">
+                                    <div class="d-flex">
+                                        <img src="../img/ticket.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Ticket Management</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="uploadticket.html" class="sidelink ">
+                                    <div class="d-flex">
+                                        <img src="../img/addticket.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Upload Ticket</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="vehical.html" class="sidelink active">
+                                    <div class="d-flex">
+                                        <img src="../img/car.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Vehicle Information</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="drivers.html" class="sidelink">
+                                    <div class="d-flex">
+                                        <img src="../img/adduser.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Drivers</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="support.html" class="sidelink">
+                                    <div class="d-flex">
+                                        <img src="../img/support.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Support</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="faq.html" class="sidelink">
+                                    <div class="d-flex">
+                                        <img src="../img/faq.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">FAQ</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="left-bottom">
+                    <a href="signin.html" class="logouts">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-right-from-bracket me-2"></i>
+                            <p class="mb-0">Logout</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-top input-shadow">
+                    <div class="d-flex align-items-center justify-content-between w-100">
+                        <div class="d-flex align-items-center">
+                            <i class="fa-solid fa-bars d-md-none pointer me-2 tog"></i>
+                            <h2 class="mb-0 font-main fw-medium me-2">Vehicle Information</h2>
+                        </div>
+                        <div class=" d-flex align-items-center justify-content-between">
+                            <div class="d-none d-lg-flex align-items-center px-3 py-2 bg-gray rounded-3 me-3">
+                                <label for="search"><i class="fa-solid fs-6 me-2 fa-magnifying-glass"></i></label>
+                                <input type="text" id="search" class="focus-none bg-transparent border-0 w-100"
+                                    placeholder="Search">
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <a href="notification.html">
+                                    <img src="../img/bell.svg" alt="user" class="bellimg me-2">
+                                </a>
+                                <div>
+                                    <div class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                        <a href="#" class="mb-0 text-decoration-none d-flex align-items-end">
+                                            <div class="me-2 me-sm-0">
+                                                <img src="../img/profile.png" alt="" class="img-wade">
+                                            </div>
+                                            <div class="ms-2 d-none d-sm-block">
+                                                <h6 class="mb-0 l-h fw-medium text-dark">Wade Warren</h6>
+                                                <span class="font-12 mb-0 text-secondary">wade.warren@mail.com</span>
+                                            </div>
+                                        </a>
+                                        <button id="dropdownIcon" class="border-0 bg-transparent" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa-solid fa-caret-down fs-5"></i>
+                                        </button>
+                                        <ul class="dropdown-menu w-100">
+                                            <li><a class="dropdown-item " href="profile.html"><img
+                                                        src="../img/view-eye.png" alt="" class="me-2">View Profile</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="login.html"><i
+                                                        class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="right-bottom">
+                    <div class="bottom-main">
+                        <div class="content ">
+                            <div class="container-fluid">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-12">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <h4 class="mb-0">Vehicle Information</h4>
+                                            </div>
+                                            <div class="text-end">
+                                                <a href="addvehical.html" class="blue-btn">
+                                                    Add Vehicle</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="table-responsive mt-3">
+                                    <table class="table">
+                                        <thead>
+                                            <tr class="align-middle">
+                                                <th>Driver Information</th>
+                                                <th>VIN</th>
+                                                <th>Vehicle Type</th>
+                                                <th>Vehicle Make</th>
+                                                <th>Vehicle Model</th>
+                                                <th>Vehicle Color</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="align-middle">
+                                                <td>D1234567</td>
+                                                <td>1HGCM82633A004352</td>
+                                                <td>Sedan</td>
+                                                <td>Honda</td>
+                                                <td>Accord</td>
+                                                <td>Black</td>
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>S2345678</td>
+                                                <td>2T1BU4EE9AC236457</td>
+                                                <td>SUV</td>
+                                                <td>Toyota</td>
+                                                <td>RAV4</td>
+                                                <td>White</td>
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>J3456789</td>
+                                                <td>1FTRW08L81KB12345</td>
+                                                <td>Truck</td>
+                                                <td>Ford</td>
+                                                <td>F-150</td>
+                                                <td>Red</td>
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>W4567890</td>
+                                                <td>5YJSA1E26FFP71234</td>
+                                                <td>Sedan</td>
+                                                <td>Tesla</td>
+                                                <td>Model S</td>
+                                                <td>Blue</td>
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>B5678901</td>
+                                                <td>3CZRM3H50EG701234</td>
+                                                <td>Crossover</td>
+                                                <td>Honda</td>
+                                                <td>CR-V</td>
+                                                <td>Silver</td>
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>T6789012</td>
+                                                <td>1FTFW1ET1EKF81234</td>
+                                                <td>Truck</td>
+                                                <td>Ford</td>
+                                                <td>F-150</td>
+                                                <td>Green</td>
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>D7890123</td>
+                                                <td>5N1AZ2MG6JN112345</td>
+                                                <td>SUV</td>
+                                                <td>Nissan</td>
+                                                <td>Murano</td>
+                                                <td>Gold</td>
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>M8901234</td>
+                                                <td>JN8AS5MT1CW201234</td>
+                                                <td>Crossover</td>
+                                                <td>Nissan</td>
+                                                <td>Rogue</td>
+                                                <td>White</td>
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>W9012345</td>
+                                                <td>1GCHK23D47F101234</td>
+                                                <td>Truck</td>
+                                                <td>Chevrolet</td>
+                                                <td>Silverado</td>
+                                                <td>Blue</td>
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>A0123456</td>
+                                                <td>4T1BF1FK2HU312345</td>
+                                                <td>Sedan</td>
+                                                <td>Toyota</td>
+                                                <td>Camry</td>
+                                                <td>Black</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

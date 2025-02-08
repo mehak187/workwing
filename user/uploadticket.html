@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main1.css">
+    <link rel="stylesheet" href="../css/main2.css">
+    <title>Upload Ticket</title>
+</head>
+
+<body>
+    <section>
+        <div class="main">
+            <div class="left ">
+                <div class="left-top">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <i class="fa-solid fa-circle-xmark d-md-none hidesidebar text-white"></i>
+                    </div>
+                    <a href="dashboard.html" class="logodiv">
+                        <img src="../img/dashboard-logo.png" alt="">
+                    </a>
+                </div>
+                <div class="left-mid">
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="dashboard.html" class="sidelink ">
+                                    <div class="d-flex">
+                                        <img src="../img/grid.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Dashboard</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ticket.html" class="sidelink ">
+                                    <div class="d-flex">
+                                        <img src="../img/ticket.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Ticket Management</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="uploadticket.html" class="sidelink active">
+                                    <div class="d-flex">
+                                        <img src="../img/addticket.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Upload Ticket</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="vehical.html" class="sidelink">
+                                    <div class="d-flex">
+                                        <img src="../img/car.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Vehicle Information</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="drivers.html" class="sidelink">
+                                    <div class="d-flex">
+                                        <img src="../img/adduser.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Drivers</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="support.html" class="sidelink">
+                                    <div class="d-flex">
+                                        <img src="../img/support.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">Support</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="faq.html" class="sidelink">
+                                    <div class="d-flex">
+                                        <img src="../img/faq.svg" class="sideicon" alt="icon">
+                                        <p class="mb-0">FAQ</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="left-bottom">
+                    <a href="signin.html" class="logouts">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-right-from-bracket me-2"></i>
+                            <p class="mb-0">Logout</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-top input-shadow">
+                    <div class="d-flex align-items-center justify-content-between w-100">
+                        <div class="d-flex align-items-center">
+                            <i class="fa-solid fa-bars d-md-none pointer me-2 tog"></i>
+                            <h2 class="mb-0 font-main fw-medium me-2">Upload Ticket</h2>
+                        </div>
+                        <div class=" d-flex align-items-center justify-content-between">
+                            <div class="d-none d-lg-flex align-items-center px-3 py-2 bg-gray rounded-3 me-3">
+                                <label for="search"><i class="fa-solid fs-6 me-2 fa-magnifying-glass"></i></label>
+                                <input type="text" id="search" class="focus-none bg-transparent border-0 w-100"
+                                    placeholder="Search">
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <a href="notification.html">
+                                    <img src="../img/bell.svg" alt="user" class="bellimg me-2">
+                                </a>
+                                <div>
+                                    <div class="dropdown d-flex justify-content-between w-100 align-items-center">
+                                        <a href="#" class="mb-0 text-decoration-none d-flex align-items-end">
+                                            <div class="me-2 me-sm-0">
+                                                <img src="../img/profile.png" alt="" class="img-wade">
+                                            </div>
+                                            <div class="ms-2 d-none d-sm-block">
+                                                <h6 class="mb-0 l-h fw-medium text-dark">Wade Warren</h6>
+                                                <span class="font-12 mb-0 text-secondary">wade.warren@mail.com</span>
+                                            </div>
+                                        </a>
+                                        <button id="dropdownIcon" class="border-0 bg-transparent" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa-solid fa-caret-down fs-5"></i>
+                                        </button>
+                                        <ul class="dropdown-menu w-100">
+                                            <li><a class="dropdown-item " href="profile.html"><img
+                                                        src="../img/view-eye.png" alt="" class="me-2">View Profile</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="login.html"><i
+                                                        class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="right-bottom">
+                    <div class="bottom-main">
+                        <div class="content ">
+                            <div class="container-fluid">
+                                <div class="row border-ott">
+                                    <div class="col-12 ">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="arr">
+                                                <a href="#" class=""><i class="bi bi-arrow-left text-dark fs-5"></i></a>
+                                            </div>
+                                            <div>
+                                                <h4 class="mb-0">Upload Tickets</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-9">
+                                    <form action="tickets-management.html">
+                                        <div class="row mt-4">
+                                            <div class="col-lg-4 col-sm-6 mb-3">
+                                                <div>
+                                                    <label class="fw-medium form-label">Upload front side of
+                                                        ticket</label>
+                                                    <div>
+                                                        <label for="front-load" class="upload-s">
+                                                            <div class="text-center upload-label" id="front-label">
+                                                                <img src="../img/re-img.png" alt="">
+                                                                <p>Drag and Drop</p>
+                                                                <p class="up-btn">Upload Front</p>
+                                                            </div>
+                                                            <div class="position-relative">
+                                                                <img id="front-preview" class="d-none img-cn"
+                                                                    alt="Front License">
+                                                                <div class="position-drop" id="front-position-drop">
+                                                                    <div class="dropdown  d-flex justify-content-between w-100 align-items-center"
+                                                                        id="front-dropdown">
+                                                                        <button id="dropdownIcon"
+                                                                            class=" border shadow rounded-circle bg-white"
+                                                                            type="button" data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            <i
+                                                                                class="bi bi-three-dots text-primary"></i>
+                                                                        </button>
+                                                                        <ul class="dropdown-menu w-100">
+                                                                            <li><a class="dropdown-item"
+                                                                                    href="#">Edit</a></li>
+                                                                            <li><a class="dropdown-item" href="#">Move
+                                                                                    Forward</a></li>
+                                                                            <li><a class="dropdown-item" href="#">Move
+                                                                                    Backward</a></li>
+                                                                            <li><a class="dropdown-item" href="#"
+                                                                                    onclick="removeImage('front')">Delete</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                        <input type="file" class="d-none" id="front-load"
+                                                            accept="image/*"
+                                                            onchange="handleImageUpload(event, 'front')">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6 mb-3">
+                                                <div>
+                                                    <label class="fw-medium form-label">Upload back side of
+                                                        ticket</label>
+                                                    <div>
+                                                        <label for="back-load" class="upload-s position-relative">
+                                                            <div class="text-center upload-label" id="back-label">
+                                                                <img src="../img/re-img.png" alt="">
+                                                                <p>Drag and Drop</p>
+                                                                <p class="up-btn">Upload Back</p>
+                                                            </div>
+                                                            <div class="position-relative">
+                                                                <img id="back-preview" class="d-none img-cn"
+                                                                    alt="Back License">
+                                                                <div class="position-drop" id="back-position-drop">
+                                                                    <div class="dropdown d-flex justify-content-between w-100 align-items-center"
+                                                                        id="back-dropdown">
+                                                                        <button id="dropdownIcon"
+                                                                            class=" border shadow rounded-circle bg-white"
+                                                                            type="button" data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            <i
+                                                                                class="bi bi-three-dots text-primary"></i>
+                                                                        </button>
+                                                                        <ul class="dropdown-menu w-100">
+                                                                            <li><a class="dropdown-item"
+                                                                                    href="#">Edit</a></li>
+                                                                            <li><a class="dropdown-item" href="#">Move
+                                                                                    Forward</a></li>
+                                                                            <li><a class="dropdown-item" href="#">Move
+                                                                                    Backward</a></li>
+                                                                            <li><a class="dropdown-item"
+                                                                                    onclick="removeImage('back')">Delete</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                        <input type="file" class="d-none" id="back-load"
+                                                            accept="image/*"
+                                                            onchange="handleImageUpload(event, 'back')">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-sm-6 mb-3">
+                                                <input type="text" class="form-control shadow-none py-2" name="" id=""
+                                                    placeholder="Violation Date">
+                                            </div>
+                                            <div class="col-sm-6 mb-3">
+                                                <div class="dropdown">
+                                                    <button id="dropdownIcon"
+                                                        class="bg-white form-select text-start border shadow-none"
+                                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Violation Type
+                                                    </button>
+                                                    <ul class="dropdown-menu w-100">
+                                                        <li><a class="dropdown-item border-bottom" href="#">Speeding</a>
+                                                        </li>
+                                                        <li><a class="dropdown-item border-bottom" href="#">Red
+                                                                Light</a></li>
+                                                        <li class="dropdown-item" aria-disabled="true">
+                                                            <div
+                                                                class="d-flex align-items-center justify-content-between">
+                                                                <div>
+                                                                    <h6 class="disabled text-secondary" disabled>
+                                                                        Reckless</h6>
+                                                                </div>
+                                                                <div>
+                                                                    <a href="choose-plan.html"
+                                                                        class="text-decoration-none d-block font-12">premium</a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 mb-3">
+                                                <input type="text" class="form-control shadow-none py-2" name="" id=""
+                                                    placeholder="Issuing Authority Number">
+                                            </div>
+                                            <div class="col-sm-6 mb-3">
+                                                <input type="number" class="form-control shadow-none py-2" name="" id=""
+                                                    placeholder="Ticket Number">
+                                            </div>
+                                            <div class="col-sm-6 mb-3">
+                                                <input type="text" class="form-control shadow-none py-2" name="" id=""
+                                                    placeholder="City">
+                                            </div>
+                                            <div class="col-sm-6 mb-3">
+                                                <input type="text" class="form-control shadow-none py-2" name="" id=""
+                                                    placeholder="State">
+                                            </div>
+                                            <div class="col-sm-6 mb-3">
+                                                <div class="form-control shadow-none py-2 d-flex align-items-center">
+                                                    <input type="text" class="border-0 p-0 w-100 bg-transparent" name=""
+                                                        id="" placeholder="Vehicle Information">
+                                                    <a href="vehical.html" class="text-black"> <i
+                                                            class="bi bi-plus fs-5"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 mb-3">
+                                                <div class="form-control shadow-none py-2 d-flex align-items-center">
+                                                    <input type="text" class="border-0 p-0 w-100 bg-transparent" name=""
+                                                        id="" placeholder="Driver Information">
+                                                    <a href="drivers.html" class="text-black"> <i
+                                                            class="bi bi-plus fs-5"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-lg-11">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                                                        <button class="btn-style">Save & Draft</button>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                                                        <button class="btn-style">Save & Submit</button>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                                                        <button type="reset" class="btn-style1">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

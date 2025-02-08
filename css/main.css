@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'dm_sans';
+    src: url('/font/dmsans-bold-webfont.woff2') format('woff2'),
+        url('/font/dmsans-bold-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: 800;
+
+}
+
+@font-face {
+    font-family: 'dm_sans';
+    src: url('/font/dmsans-medium-webfont.woff2') format('woff2'),
+        url('/font/dmsans-medium-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: 600;
+
+}
+
+@font-face {
+    font-family: 'dm_sans';
+    src: url('/font/dmsans-regular-webfont.woff2') format('woff2'),
+        url('/font/dmsans-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: 400;
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('/font/poppins-black-webfont.woff2') format('woff2'),
+        url('/font/poppins-black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: 900;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('/font/poppins-bold-webfont.woff2') format('woff2'),
+        url('/font/poppins-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: 700;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('/font/poppins-extrabold-webfont.woff2') format('woff2'),
+        url('/font/poppins-extrabold-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: 800;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('/font/poppins-semibold-webfont.woff2') format('woff2'),
+        url('/font/poppins-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: 600;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('/font/poppins-thin-webfont.woff2') format('woff2'),
+        url('/font/poppins-thin-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: 100;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('/font/poppins-light-webfont.woff2') format('woff2'),
+        url('/font/poppins-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: 300;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('/font/poppins-medium-webfont.woff2') format('woff2'),
+        url('/font/poppins-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: 500;
+
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('/font/poppins-regular-webfont.woff2') format('woff2'),
+        url('/font/poppins-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: 400;
+}
+
+:root {
+    --blue: #2C0C4D;
+    --grey: #F0F0F4;
+}
+
+body {
+    font-family: 'poppins';
+}
+
+.bg-gray{
+    background-color: var(--grey);
+}
+.bg-blue{
+    background-color: var( --blue);
+}
+.mycontainer {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.font-md {
+    font-weight: 500;
+}
+
+.font-semi {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+textarea {
+    resize: none;
+}
+
+.ex-small {
+    font-size: 12px;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.focus-none:focus {
+    box-shadow: none;
+    border: solid 1px #cdcdcd;
+    outline: none;
+}
+
+.nowrap {
+    text-wrap: nowrap !important;
+}
+
+.table-responsive .table {
+    min-width: 995px;
+}
+
+.table-responsive th {
+    text-wrap: nowrap !important;
+}
+
+.table th {
+    background-color: var(--blue);
+    color: #ffffff;
+    font-weight: 500 !important;
+}
+
+.bg-green {
+    background: #2C0C4D;
+}
+.ext-small {
+    font-size: 14px;
+}
+.bg-lgreen,
+.bg-grey {
+    background: #e2eae3;
+}
+.tick-img {
+    max-width: 60px;
+    height: 60px;
+    width: 100%;
+}
+.bg-effect {
+    background: url("../img/bg-effect.png") no-repeat;
+    background-size: cover;
+}
+.blue-btn {
+    background-color: var(--blue);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.text-grren {
+    color: var(--blue);
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+.navbar-brand img{
+    max-width: 110px;
+    margin-right: 10px;
+}
+@media screen and (max-width: 577px){
+    .navbar-brand img{
+        margin-right: 10px;
+    }
+
+}
+
+@media screen and (max-width: 420px){
+    nav .navbar-brand {
+        max-width: 200px;
+    }
+    .navbar-brand img{
+        margin-right: 10px;
+    }
+   nav .navbar-brand span {
+        text-wrap: wrap;
+    }
+}
