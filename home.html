@@ -423,55 +423,42 @@
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
+          <form action="">
             <div class="modal-header">
-                <h5 class="card-title">Stay Informed with Our Updates!</h5>
-            </div>
-            <div class="modal-body">
-                <p>We'd love to keep you informed with the latest news, promotions, and updates via text message.</p>
-                <p>To ensure we respect your preferences, please review and agree to the following:</p>
-                <div class="form-check mb-3">
-                    <input class="form-check-input show-phone-modal" type="checkbox" id="generalMessages">
-                    <label class="form-check-label" for="generalMessages">
-                        General Messages: I agree to receive informational messages about my account, transactions, and service updates.
-                    </label>
-                </div>
-                <div class="form-check mb-3">
-                    <input class="form-check-input show-phone-modal" type="checkbox" id="marketingMessages">
-                    <label class="form-check-label" for="marketingMessages">
-                        Marketing Messages: I expressly consent to receive promotional offers, discounts, and marketing messages.
-                    </label>
-                </div>
-                <p>By opting in, you acknowledge that you can revoke your consent at any time by replying "STOP" to any message or contacting our support team.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-labelledby="phoneModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title">Enter Your Mobile Number</h5>
-             
+              <h5 class="card-title">Stay Informed with Our Updates!</h5>
           </div>
           <div class="modal-body">
-              <form id="phoneForm">
-                  <div class="form-group">
-                      <label for="mobileNumber">Mobile Number</label>
-                      <input type="text" class="form-control focus-none" id="mobileNumber" placeholder="+1" required>
-                  </div>
-                  <div class="modal-footer mt-4">
-                    <button type="button" class="btn btn-secondary close" id="closephone">Close</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
-                </div>
-           
-              </form>
+              <p>We'd love to keep you informed with the latest news, promotions, and updates via text message.</p>
+              <p>To ensure we respect your preferences, please review and agree to the following:</p>
+
+              <div class="form-check mb-3">
+                  <input class="form-check-input show-phone-input" type="checkbox" id="generalMessages" required>
+                  <label class="form-check-label" for="generalMessages">
+                      General Messages: I agree to receive informational messages about my account, transactions, and service updates.
+                  </label>
+              </div>
+              <div class="form-check mb-3">
+                  <input class="form-check-input show-phone-input" type="checkbox" id="marketingMessages" required>
+                  <label class="form-check-label" for="marketingMessages">
+                      Marketing Messages: I expressly consent to receive promotional offers, discounts, and marketing messages.
+                  </label>
+              </div>
+
+              <!-- Hidden Phone Input Field -->
+              <div id="phoneInputSection" class="mt-3 mb-4" style="display: none;">
+                  <label for="mobileNumber">Mobile Number</label>
+                  <input type="text" class="form-control focus-none" id="mobileNumber" placeholder="+1 " required>
+              </div>
+
+              <p>By opting in, you acknowledge that you can revoke your consent at any time by replying "STOP" to any message or contacting our support team.</p>
           </div>
-      </div>
-  </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary save-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Save changes</button>
+          </div>
+          </form>
+        </div>
+    </div>
 </div>
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -512,57 +499,66 @@
 <!-- jQuery Script -->
 <script>
   $(document).ready(function () {
-      // Checkbox click event to show phone modal
-      $(".show-phone-modal").on("change", function () {
-          if ($(this).is(":checked")) {
-              $("#phoneModal").modal("show");
-              $("#myModal").modal('hide');
-              $("#mobileNumber").val("+1"); // Auto-fill phone number with +1
+      // Initially disable the Save button
+      $(".save-btn").prop("disabled", true);
+
+      // Show phone input when any checkbox is checked
+      $(".show-phone-input").on("change", function () {
+          if ($("#generalMessages").is(":checked") || $("#marketingMessages").is(":checked")) {
+              $("#phoneInputSection").slideDown();
+          } else {
+              $("#phoneInputSection").slideUp();
+          }
+          validateForm();
+      });
+
+      // Function to validate form
+      function validateForm() {
+          let isGeneralChecked = $("#generalMessages").is(":checked");
+          let isMarketingChecked = $("#marketingMessages").is(":checked");
+          let phoneNumber = $("#mobileNumber").val().trim();
+
+          if (isGeneralChecked && isMarketingChecked && phoneNumber.length > 3) {
+              $(".save-btn").prop("disabled", false);
+          } else {
+              $(".save-btn").prop("disabled", true);
+          }
+      }
+
+      // Ensure "+1 " stays at the beginning of the phone number
+      $("#mobileNumber").val("+1 ");
+
+      $("#mobileNumber").on("input", function () {
+          if (!$(this).val().startsWith("+1 ")) {
+              $(this).val("+1 ");
+          }
+          validateForm();
+      });
+
+      $("#mobileNumber").on("focus", function () {
+          let input = $(this)[0];
+          setTimeout(() => {
+              input.setSelectionRange(input.value.length, input.value.length);
+          }, 10);
+      });
+
+      // Prevent modal from opening if form is invalid
+      $("form").on("submit", function (e) {
+          e.preventDefault();
+
+          let isGeneralChecked = $("#generalMessages").is(":checked");
+          let isMarketingChecked = $("#marketingMessages").is(":checked");
+          let phoneNumber = $("#mobileNumber").val().trim();
+
+          if (isGeneralChecked && isMarketingChecked && phoneNumber.length > 3) {
+              $("#exampleModal").modal("show");
+              $("#myModal").modal("hide");
           }
       });
-
-      // Prevent multiple modals overlapping
-      $(".modal").on("hidden.bs.modal", function () {
-          $("body").removeClass("modal-open");
-          $(".modal-backdrop").remove();
-      });
-
-      // Form submission event
-      $("#phoneForm").on("submit", function (e) {
-          $("#phoneModal").modal("hide");
-      });
   });
-  $("#closephone").on("click", function (e) {
-      $("#phoneModal").modal("hide");
-  });
-  
-  $(document).ready(function () {
-    // Default value set +1
-    $("#mobileNumber").val("+1 ");
-
-    // Ensure user cannot remove "+1 "
-    $("#mobileNumber").on("input", function () {
-        if (!$(this).val().startsWith("+1 ")) {
-            $(this).val("+1 ");
-        }
-    });
-
-    // When user focuses, cursor comes after "+1 "
-    $("#mobileNumber").on("focus", function () {
-        let input = $(this)[0];
-        setTimeout(() => {
-            input.setSelectionRange(input.value.length, input.value.length);
-        }, 10);
-    });
-
-    // Form submission event
-    $("#phoneForm").on("submit", function (e) {
-        e.preventDefault();
-        alert("Phone number saved: " + $("#mobileNumber").val());
-        $("#phoneModal").modal("hide");
-    });
-});
 </script>
+
+
 </body>
 
 </html>
